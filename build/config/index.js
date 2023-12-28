@@ -10,6 +10,7 @@ dotenv_1.default.config({
 });
 const config = {
     port: process.env.PORT || 3000,
+    jwtSecret: process.env.JWT_SECRET || 'jtEknV94ELcnBrO981vjlYFxMnrBYap0',
     clientId: process.env.CLIENT_ID || 'default_client_id',
     clientSecret: process.env.CLIENT_SECRET || 'default_client_secret',
 };

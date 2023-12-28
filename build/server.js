@@ -6,14 +6,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const routes_1 = __importDefault(require("./routes"));
 const config_1 = __importDefault(require("./config"));
-const middlewares_1 = require("./middlewares");
 const app = (0, express_1.default)();
 const PORT = config_1.default.port;
 app.use(express_1.default.json());
 app.get('/', (req, res) => {
     res.send('Server running');
 });
-app.use(middlewares_1.authenticateToken);
+// app.use(authenticateToken);
 app.use('/api', routes_1.default);
 // Start the server
 app.listen(PORT, () => {
